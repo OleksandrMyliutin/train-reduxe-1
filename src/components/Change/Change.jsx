@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { toggleTemplate } from '../../redux/themeReducer';
 
 
 
@@ -16,7 +17,7 @@ const Change = () => {
     <div>
       <h2>Change your theme!</h2>
       <p>Current theme: {mode}</p>
-      <button onClick={() => {dispatch({ type: 'TOGGLE_THEME' })}}>{">"}Click me {"<"}</button>
+      <button onClick={() => {dispatch(toggleTemplate())}}>{">"}Click me {"<"}</button>
     </div>
   )
 }
